@@ -173,7 +173,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="out" artifactName="SPP" buildProperties="" description="" id="com.ti.ccstudio.buildDefinitions.MSP430.Debug.86286695" name="SPP" parent="com.ti.ccstudio.buildDefinitions.MSP430.Debug" postbuildStep="&quot;${CG_TOOL_HEX}.exe&quot; --ti_txt &quot;${BuildArtifactFileName}&quot; -o &quot;${BuildArtifactFileBaseName}.txt&quot; -order MS -romwidth 16">
+				<configuration artifactExtension="out" artifactName="SPP" buildProperties="" description="" id="com.ti.ccstudio.buildDefinitions.MSP430.Debug.86286695" name="SPP" parent="com.ti.ccstudio.buildDefinitions.MSP430.Debug" postbuildStep="&quot;${CG_TOOL_HEX}&quot; --ti_txt &quot;${BuildArtifactFileName}&quot; -o &quot;${BuildArtifactFileBaseName}.txt&quot; -order MS -romwidth 16">
 					<folderInfo id="com.ti.ccstudio.buildDefinitions.MSP430.Debug.86286695.1021876633" name="/" resourcePath="">
 						<toolChain id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.exe.DebugToolchain.460241787" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.MSP430_4.1.exe.linkerDebug.1531567078">
 							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.1302996861" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
@@ -203,18 +203,18 @@
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.DEBUGGING_MODEL.1939480177" name="Debugging model" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.OPT_LEVEL.699197730" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.OPT_LEVEL.0" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.PREINCLUDE.74763620" name="Specify a preinclude file (--preinclude)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.PREINCLUDE" valueType="stringList">
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\Application\PreInclude.h&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../Application/PreInclude.h&quot;"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.INCLUDE_PATH.278199483" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${CCS_BASE_ROOT}/msp430/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\..\FreeRTOS/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\..\FreeRTOS\portable\MSP430F5438&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\..\OSAL&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\..\Stack\Api&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\Hardware&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\Hardware\F5XX_F6XX_Core_Lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\Application&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../../FreeRTOS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../../FreeRTOS/portable/MSP430F5438&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../../OSAL&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../../Stack/Api&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../Hardware&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../Hardware/F5xx_F6xx_Core_Lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../Application&quot;"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.DIAG_WARNING.1123567455" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning, -pdsw)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.compilerID.DIAG_WARNING" valueType="stringList">
 									<listOptionValue builtIn="false" value="225"/>
@@ -236,8 +236,8 @@
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.linkerID.OUTPUT_FILE.1451022151" name="Specify output file name (--output_file, -o)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.linkerID.OUTPUT_FILE" value="&quot;SPP.out&quot;" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.linkerID.MAP_FILE.1502656062" name="Input and output sections listed into &lt;file&gt; (--map_file, -m)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.linkerID.MAP_FILE" value="&quot;MetaWatch.map&quot;" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.linkerID.LIBRARY.1962809908" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.linkerID.LIBRARY" valueType="libs">
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\..\Stack\Api\CCS\Stack2.lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}\..\..\Stack\Api\CCS\Wrapper.lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../../Stack/Api/CCS/Stack2.lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/../../Stack/Api/CCS/Wrapper.lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;libc.a&quot;"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_4.1.linkerID.SEARCH_PATH.1014910206" name="Add &lt;dir&gt; to library search path (--search_path, -i)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_4.1.linkerID.SEARCH_PATH" valueType="stringList">
@@ -596,4 +596,5 @@
 		</project-mappings>
 	</storageModule>
 	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
