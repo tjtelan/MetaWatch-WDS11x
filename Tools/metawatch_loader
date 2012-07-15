@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+
+if [[ $# -eq 0 ]] then
+    echo "Please specify hex file"
+    exit 1;
+fi
+
+if [[ $# -gt 1 ]] then
+    echo "Too many arguments"
+    exit 1;
+fi
+
+mspdebug rf2500 "opt fet_block_size 512" "prog ${1}"
+
