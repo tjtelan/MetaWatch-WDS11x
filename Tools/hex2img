@@ -1,0 +1,77 @@
+#!/usr/bin/env python
+
+import re
+import Image, ImageDraw
+
+
+def input_complete(input_list):
+    if ";" in input_list[-1]:
+        return True
+    else:
+        return False
+def get_input(prompt1, prompt2):
+    L = list()
+    prompt = prompt1
+    while True:
+        L.append(raw_input(prompt))
+        if input_complete(L):
+            return "\n".join(L)
+        prompt = prompt2
+
+if __name__ == "__main__":
+    s = get_input("enter data (Terminate with ;): ", "")
+
+    s = re.sub(r';', '', s)
+    s = re.sub(r'\s', '', s)
+
+    s = s.split(',')
+    for index,item in enumerate(s):
+        s[index] = int(item,16)
+
+    size = (96,96)
+    image = Image.new("P", size)
+    draw = ImageDraw.Draw(image)
+
+
+    x = 0
+    for column,byte in enumerate(s):
+        print("Translating row {0:d}, column {1:d} ({2:d})").format( x, column%12, byte)
+            #b0
+        if(byte & int('0x01',16)):
+            print("bit0 {0:d}").format( ((column%12)*8)+0 )
+            draw.point( (((column%12)*8)+0, x), 255)
+
+            #b1
+        if(byte & int('0x02',16)):
+            print("bit1 {0:d}").format( (column%12)*8+1 )
+            draw.point( (((column%12)*8)+1, x), 255)
+
+            #b3
+        if(byte & int('0x08',16)):
+            print("bit3 {0:d}").format( (column%12)*8+3 )
+            draw.point( (((column%12)*8)+3, x), 255)
+
+            #b4
+        if(byte & int('0x10',16)):
+            print("bit4 {0:d}").format( (column%12)*8+4 )
+            draw.point( (((column%12)*8)+4, x), 255)
+
+            #b5
+        if(byte & int('0x20',16)):
+            print("bit5 {0:d}").format( (column%12)*8+5 )
+            draw.point( (((column%12)*8)+5, x), 255)
+
+            #b6
+        if(byte & int('0x40',16)):
+            print("bit6 {0:d}").format( (column%12)*8+6)
+            draw.point( (((column%12)*8)+6, x), 255)
+
+            #b7
+        if(byte & int('0x80',16)):
+            print("bit7 {0:d}").format( (column%12)*8+7 )
+            draw.point( (((column%12)*8)+7, x), 255)
+
+        if(column % 12 == 0):
+            x = x + 1
+
+        image.save("./test.bmp")

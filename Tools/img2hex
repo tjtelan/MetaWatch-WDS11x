@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+
+import Image
+
+if __name__ == "__main__":
+    im = Image.open("../images/angryfaic.png")
+
+    l = []
+
+    byte = 0
+    for y in range(96):
+        for x in range(96):
+            t_x, t_y = im.getpixel( (x,y) )
+
+            if (t_x, t_y) != (255,255):
+                if x % 8 == 1:
+                    byte = byte | int('0x01',16)
+                if x % 8 == 2:
+                    byte = byte | int('0x02',16)
+                if x % 8 == 3:
+                    byte = byte | int('0x04',16)
+                if x % 8 == 4:
+                    byte = byte | int('0x08',16)
+                if x % 8 == 5:
+                    byte = byte | int('0x10',16)
+                if x % 8 == 6:
+                    byte = byte | int('0x20',16)
+                if x % 8 == 7:
+                    byte = byte | int('0x40',16)
+                if x % 8 == 0:
+                    byte = byte | int('0x80',16)
+
+            if x % 8 == 0:
+                l.append(hex(byte))
+                byte = 0
+
+    print ",".join(l)
